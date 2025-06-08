@@ -9,11 +9,11 @@ from .transpiler import transpile
 
 def cli():
     """Command line interface for BTML."""
-    parser = argparse.ArgumentParser(description="BTML - A language that transpiles to HTML")
+    parser = argparse.ArgumentParser(description="BTML - HTML but with curly brackets")
     parser.add_argument("input", nargs="?", type=str, default=None, 
-                       help="Input BTML file")
+                       help="input BTML file")
     parser.add_argument("-o", "--output", type=str, default=None,
-                       help="Output HTML file")
+                       help="output HTML file")
     
     args = parser.parse_args()
     
