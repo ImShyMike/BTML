@@ -39,3 +39,9 @@ html[lang="en"] {
   }
 }
 ```
+
+## Installation
+
+BTML can be installed from PyPI using pip:
+
+`pip install btml`
