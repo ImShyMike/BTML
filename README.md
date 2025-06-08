@@ -1,10 +1,10 @@
 # BTML
 
-HTML but with brackets :D
+HTML but with braces :D
 
  ---
 
-Ever felt like plain HTML is lacking some brackets? Worry no more, BTML fixes that for you!
+Ever felt like plain HTML is lacking some braces? Worry no more, BTML fixes that for you!
 
 Plain HTML (bad):
 
