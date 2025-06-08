@@ -47,17 +47,23 @@ html[lang="en"] {
 
 BTML can be installed from PyPI using pip:
 
-`pip install btml`
+```bash
+pip install btml
+```
 
 ## Usage
 
 After installing, run:
 
-`btml`
+```bash
+btml
+```
 
 or, if that doesn't work:
 
-`pythom -m btml`
+```bash
+pythom -m btml
+```
 
 ## License
 
