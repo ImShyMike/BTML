@@ -3,12 +3,11 @@
 [![PyPI - Version](https://img.shields.io/pypi/v/btml.svg)](https://pypi.org/project/btml)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/btml.svg)](https://pypi.org/project/btml)
 
-
-HTML but with braces :D
+HTML but with curly brackets
 
  ---
 
-Ever felt like plain HTML is lacking some braces? Worry no more, BTML fixes that for you!
+Ever felt like plain HTML is lacking some curly brackets? Worry no more, BTML fixes that for you!
 
 Plain HTML (bad):
 
