@@ -1,5 +1,9 @@
 # BTML
 
+[![PyPI - Version](https://img.shields.io/pypi/v/btml.svg)](https://pypi.org/project/btml)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/btml.svg)](https://pypi.org/project/btml)
+
+
 HTML but with braces :D
 
  ---
@@ -45,3 +49,17 @@ html[lang="en"] {
 BTML can be installed from PyPI using pip:
 
 `pip install btml`
+
+## Usage
+
+After installing, run:
+
+`btml`
+
+or, if that doesn't work:
+
+`pythom -m btml`
+
+## License
+
+`btml` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
