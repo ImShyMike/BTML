@@ -51,6 +51,12 @@ BTML can be installed from PyPI using pip:
 pip install btml
 ```
 
+or using `uv`'s tools feature:
+
+```bash
+uv tool install btml
+```
+
 ## Usage
 
 After installing, run:
@@ -59,10 +65,16 @@ After installing, run:
 btml
 ```
 
-or, if that doesn't work:
+or if that doesn't work:
 
 ```bash
 pythom -m btml
+```
+
+If installed using `uv`:
+
+```bash
+uv tool run btml
 ```
 
 ## License
