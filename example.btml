@@ -5,7 +5,7 @@ html[lang="en"] {
     title "My First Web Page"
   }
   body {
-    <# comments also work #>
+    <# This is a comment #>
     h1 "Welcome to My Web Page"
     p "This is a simple BTML example with a button below."
     button[onclick="alert('Hello, world!')"] "Click Me"
