@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: "Inter";
+  src:
+    url("https://fonts.bunny.net/inter/files/inter-latin-400-normal.woff") format("woff"),
+    url("https://fonts.bunny.net/inter/files/inter-latin-400-normal.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fira Code";
+  src:
+    url("https://fonts.bunny.net/fira-code/files/fira-code-latin-400-normal.woff") format("woff"),
+    url("https://fonts.bunny.net/fira-code/files/fira-code-latin-400-normal.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-family: "Inter", ui-sans-serif, system-ui;
+}
+
+code, pre, .cm-content:content {
+  font-family: "Fira Code", "Consolas", monospace !important;
+}

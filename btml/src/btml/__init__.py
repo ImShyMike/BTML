@@ -4,43 +4,50 @@
 
 import argparse
 import sys
+
 from .parser import Parser
 from .transpiler import transpile
+
 
 def cli():
     """Command line interface for BTML."""
     parser = argparse.ArgumentParser(description="BTML - HTML but with curly brackets")
-    parser.add_argument("input", nargs="?", type=str, default=None, 
-                       help="input BTML file")
-    parser.add_argument("-o", "--output", type=str, default=None,
-                       help="output HTML file")
-    
+    parser.add_argument(
+        "input", nargs="?", type=str, default=None, help="input BTML file"
+    )
+    parser.add_argument(
+        "-o", "--output", type=str, default=None, help="output HTML file"
+    )
+
     args = parser.parse_args()
-    
+
     if args.input is None:
         print("Error: No input file provided", file=sys.stderr)
         parser.print_help()
         sys.exit(1)
-        
+
     if args.output is None:
-        args.output = args.input.rsplit('.', 1)[0] + '.html'
-        
+        args.output = args.input.rsplit(".", 1)[0] + ".html"
+
     try:
-        with open(args.input, 'r') as input_file:
+        with open(args.input, "r", encoding="utf8") as input_file:
             btml_content = input_file.read()
-            
+
         parser_instance = Parser()
         parsed_content = parser_instance.produce_ast(btml_content)
         html_output = transpile(parsed_content)
 
-        with open(args.output, 'w') as output_file:
+        with open(args.output, "w", encoding="utf8") as output_file:
             output_file.write(html_output)
 
-        print(f"Successfully transpiled \"{args.input}\" to \"{args.output}\"", file=sys.stderr)
+        print(
+            f'Successfully transpiled "{args.input}" to "{args.output}"',
+            file=sys.stderr,
+        )
     except FileNotFoundError:
-        print(f"Error: Could not find input file \"{args.input}\"", file=sys.stderr)
+        print(f'Error: Could not find input file "{args.input}"', file=sys.stderr)
         sys.exit(1)
-    except Exception as e:
+    except Exception as e: # pylint: disable=broad-except
         print(f"Error during transpilation: {e}", file=sys.stderr)
         sys.exit(1)
 
@@ -52,9 +59,10 @@ def main():
     except KeyboardInterrupt:
         print("\nOperation cancelled by user", file=sys.stderr)
         sys.exit(1)
-    except Exception as e:
+    except Exception as e: # pylint: disable=broad-except
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()

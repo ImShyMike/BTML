@@ -19,7 +19,10 @@ classifiers = [
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
 ]
-dependencies = []
+dependencies = [
+    "fastapi>=0.115.13",
+    "uvicorn>=0.34.3",
+]
 
 [project.urls]
 Documentation = "https://github.com/ImShyMike/btml#readme"
