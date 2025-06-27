@@ -210,7 +210,7 @@ html[lang="en"] {
 				headers: {
 					'Content-Type': 'application/json'
 				},
-				[style="background-color: #dddddd"]: JSON.stringify({ code })
+				body: JSON.stringify({ code })
 			});
 
 			if (!response.ok) {
