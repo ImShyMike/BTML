@@ -5,7 +5,7 @@
 	import { html } from '@codemirror/lang-html';
 	import { PUBLIC_COMMIT_SHA } from '$env/static/public';
 	import { IconGitCommit, IconWifi, IconWifiOff } from '@tabler/icons-svelte';
-	import { gitRepoUrl } from '../lib/index.js';
+	import { gitRepoUrl } from '$lib';
 	import { onMount } from 'svelte';
 
 	let value = $state(`!html!
