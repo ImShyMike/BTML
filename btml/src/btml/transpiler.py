@@ -90,7 +90,7 @@ def to_string(
                 )
             case HTMLAttribute():
                 result.append(
-                    f"{indent}<{statement.name}{properties_to_string(statement.properties)}{' /' if statement.close else ''}>"
+                    f"{indent}<{statement.name}{properties_to_string(statement.properties)}{' /' if not statement.close else ''}>"
                     + (
                         (
                             f"{
