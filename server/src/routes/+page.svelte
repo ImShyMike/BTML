@@ -396,7 +396,7 @@ html[lang="en"] {
 					class="flex items-center text-slate-300 transition-colors duration-200 hover:text-blue-400"
 				>
 					<IconGitCommit size={16} />
-					<span class="font-mono text-m">{shortHash}</span>
+					<span class="text-m font-mono">{shortHash}</span>
 				</a>
 			</div>
 		</div>

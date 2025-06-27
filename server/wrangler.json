@@ -1,16 +1,16 @@
 {
-  "name": "btml",
-  "main": ".svelte-kit/cloudflare/_worker.js",
-  "compatibility_date": "2025-06-27",
-  "assets": {
-    "binding": "ASSETS",
-    "directory": ".svelte-kit/cloudflare"
-  },
-  "env": {
-    "production": {
-      "placement": {
-        "mode": "smart"
-      }
-    }
-  }
+	"name": "btml",
+	"main": ".svelte-kit/cloudflare/_worker.js",
+	"compatibility_date": "2025-06-27",
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".svelte-kit/cloudflare"
+	},
+	"env": {
+		"production": {
+			"placement": {
+				"mode": "smart"
+			}
+		}
+	}
 }
