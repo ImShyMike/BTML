@@ -18,7 +18,7 @@ Plain HTML (bad):
   <meta charset="UTF-8">
   <title>My First Web Page</title>
 </head>
-<body>
+<body style="background-color: #dddddd">
   <!--  This is a comment  -->
   <h1>Welcome to My Web Page</h1>
   <p>This is a simple BTML example with a button below.</p>
@@ -36,10 +36,10 @@ html[lang="en"] {
     meta[charset="UTF-8"].
     title "My First Web Page"
   }
-  body {
+  body[style="background-color: #dddddd"] {
     <# This is a comment #>
     h1 "Welcome to My Web Page"
-    p "This is a simple HTML example with a button below."
+    p "This is a simple BTML example with a button below."
     button[onclick="alert('Hello, world!')"] "Click Me"
   }
 }

@@ -1,11 +1,13 @@
+"""Server backend for BTML's online IDE."""
+
 import fastapi
 import uvicorn
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
-from btml.__about__ import __version__
-from btml.parser import Parser
-from btml.transpiler import transpile
+from .__about__ import __version__
+from .parser import Parser
+from .transpiler import transpile
 
 HOST, PORT = "0.0.0.0", 8000
 
@@ -52,7 +54,7 @@ async def transpile_code(transpile_request: TranspileRequest):
         return {"response": None, "error": "No code provided for transpilation."}
 
     parser_instance = Parser()
-    
+
     try:
         parsed_code = parser_instance.produce_ast(transpile_request.code)
     except Exception as e:  # pylint: disable=broad-except
