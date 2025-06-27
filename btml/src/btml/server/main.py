@@ -1,7 +1,9 @@
 import fastapi
 import uvicorn
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 
+from btml.__about__ import __version__
 from btml.parser import Parser
 from btml.transpiler import transpile
 
@@ -10,10 +12,17 @@ HOST, PORT = "0.0.0.0", 8000
 app = fastapi.FastAPI(
     title="BTML Server",
     description="A language server for the BTML programming language.",
-    version="0.1.0",
+    version=__version__,
     debug=True,
 )
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class TranspileRequest(BaseModel):
     """Request model for transpiling BTML code."""
@@ -35,7 +44,7 @@ async def version():
     return {"response": app.version, "error": None}
 
 
-@app.post("transpile")
+@app.post("/transpile")
 async def transpile_code(transpile_request: TranspileRequest):
     """Transpile BTML code to another HTML."""
 
@@ -43,7 +52,11 @@ async def transpile_code(transpile_request: TranspileRequest):
         return {"response": None, "error": "No code provided for transpilation."}
 
     parser_instance = Parser()
-    parsed_code = parser_instance.produce_ast(transpile_request.code)
+    
+    try:
+        parsed_code = parser_instance.produce_ast(transpile_request.code)
+    except Exception as e:  # pylint: disable=broad-except
+        return {"response": None, "error": f"Parsing failed: {str(e)}"}
 
     try:
         transpiled_code = transpile(parsed_code)
