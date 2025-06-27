@@ -14,7 +14,7 @@ html[lang="en"] {
     meta[charset="UTF-8"].
     title "My First Web Page"
   }
-  body {
+  body[style="background-color: #dddddd"] {
     <# This is a comment #>
     h1 "Welcome to My Web Page"
     p "This is a simple BTML example with a button below."
@@ -210,7 +210,7 @@ html[lang="en"] {
 				headers: {
 					'Content-Type': 'application/json'
 				},
-				body: JSON.stringify({ code })
+				[style="background-color: #dddddd"]: JSON.stringify({ code })
 			});
 
 			if (!response.ok) {

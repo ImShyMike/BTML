@@ -15,7 +15,7 @@ Plain HTML (bad):
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>My First Web Page</title>
 </head>
 <body style="background-color: #dddddd">
