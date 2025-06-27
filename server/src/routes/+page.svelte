@@ -386,7 +386,7 @@ html[lang="en"] {
 			{/if}
 		</div>
 	</div>
-	<div class="flex items-center justify-between border-t border-gray-600 bg-gray-900 px-4 py-1">
+	<div class="flex items-center justify-between border-t border-gray-600 bg-gray-900 px-2 py-1">
 		<div class="flex items-center space-x-4">
 			<div class="flex items-center space-x-1">
 				<a
@@ -395,22 +395,22 @@ html[lang="en"] {
 					rel="noopener noreferrer"
 					class="flex items-center text-slate-300 transition-colors duration-200 hover:text-blue-400"
 				>
-					<IconGitCommit size={18} />
-					<span>{shortHash}</span>
+					<IconGitCommit size={16} />
+					<span class="font-mono text-m">{shortHash}</span>
 				</a>
 			</div>
 		</div>
 
-		<div class="flex items-center space-x-4">
+		<div class="flex items-center space-x-2">
 			<div class="flex items-center space-x-1 text-slate-300">
 				<span class="font-mono text-sm">{formatTime(time)}</span>
 			</div>
 			<div class="flex items-center space-x-1">
 				<div class="flex items-center text-slate-300" title={isOnline ? 'Online' : 'Offline'}>
 					{#if isOnline}
-						<IconWifi size={14} class="text-green-400" />
+						<IconWifi size={16} class="text-green-400" />
 					{:else}
-						<IconWifiOff size={14} class="text-red-400" />
+						<IconWifiOff size={16} class="text-red-400" />
 					{/if}
 				</div>
 			</div>
