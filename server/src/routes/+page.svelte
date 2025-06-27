@@ -205,7 +205,7 @@ html[lang="en"] {
 		contentError = false;
 
 		try {
-			const response = await fetch('http://shymike.dev/transpile', {
+			const response = await fetch('https://btml.shymike.dev/transpile', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
